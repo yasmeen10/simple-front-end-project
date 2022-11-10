@@ -1,0 +1,49 @@
+header{
+    .container{
+        background-image: linear-gradient(to left,#7ed6b41c, #faf9f9,#7ed6b45e,#7ed6b45e );
+        nav{
+            margin-bottom: 0px;
+            display: flex;
+            justify-content: space-between;
+            background-repeat: no-repeat;
+            background-size: inherit;
+        
+            h2{
+                color: $primary-color;
+                margin-left: 130px;
+                margin-top: 40px;
+                font-size: 3.125rem;
+                line-height: 1.875rem;
+                @include mobileMode{
+                    margin-left: 10%;
+                    margin-top: 3%;
+                }
+            }
+            ul{
+                margin-left: 18.1875em;
+                display: flex;
+                justify-content: space-between;
+                list-style: none;
+                width: 31.25em;
+                @include mobileMode{
+                    display: none;
+                } 
+                li{
+                    margin-top: 3.0625em;
+                    margin-left: 2.5em;
+                    font-size: 1.125em;
+                    line-height:  1.36125em;
+                    height: 1.375em;
+                    a{
+                        text-decoration: none;
+                        color: $second-color;
+                    }
+                    .first-child{
+                        color: black;
+                        width: 3.1875em; ;
+                    }
+                }
+            }
+        }
+    }
+}

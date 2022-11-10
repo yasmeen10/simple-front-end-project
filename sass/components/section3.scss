@@ -1,0 +1,111 @@
+.section3{
+    padding-top: 60px;
+    background-color:  #F9F8FE;
+    width: 100%;
+    display: flex;
+    @include mobileMode{
+        display: flex;
+        flex-direction: column;
+        // @include flexCenter();
+    }
+    .left-sec{
+        margin-left: 130px;
+        width: 50%;
+        @include mobileMode{
+            width: 100%;
+        }
+        h2{
+            font-size:3.125em ;
+            font-weight: 600;
+            width: 600px;
+            color: $p-color;
+            @include mobileMode{
+                width:70%
+            }
+        }
+        p{
+            color: $second-color;
+            font-size: 1em;
+            font-weight: 500;
+            width: 85%;
+            height: 19px;
+            margin-top: 30px;
+            @include mobileMode{
+                width: 60%;
+            }
+        }
+        .rating{
+            display: flex;
+            margin-top: 73px;
+            @include mobileMode{
+                display: flex;
+                flex-direction: column;
+                margin-left: 21%;
+            }
+            .sec1{
+                margin-right: 30px;
+                p{
+                    font-size: 1.15em;
+                    font-weight: 500px;
+                    color: $p-color;
+                    @include mobileMode{
+                        margin-left: 5%;
+                    }
+                }
+                :last-child{
+                    //color: $second-color;
+                    color: black;
+                }
+            }
+            .sec2{
+                margin-right: 30px;
+                p{
+                    font-size: 1.15em;
+                    font-weight: 500px;
+                    color: $p-color;
+                    @include mobileMode{
+                        margin-left: 5%;
+                    }
+                }
+                :last-child{
+                    //color: $second-color;
+                    color: black;
+                }
+            }
+        }
+    }
+    .right-sec{
+        width: 50%;
+        @include mobileMode{
+            width: 100%;
+            margin-left: 120px;
+        }
+        .sec1{
+            display: flex;
+            margin-left: 21px;
+            img{
+                border: 1px solid white;
+                background-color: white;
+                width: 25px;
+                height: 20px;
+                margin-top: 38px;
+            }
+            .sec1-right{
+                margin-left: 15px;
+                h4{
+                    color: $p-color;
+                    font-weight: 700px;
+                    font-size: 28px;
+                }
+                p{
+                    margin-top: -25px;
+                    color: $second-color;
+                    font-size: 18px;
+                    width: 428px;
+                    font-weight: 500px;
+                }
+            }
+        }
+
+    }
+}

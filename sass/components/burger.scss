@@ -1,0 +1,104 @@
+.nav-burger{
+    cursor: pointer;
+    align-self: stretch;
+    @include flexCenter();
+    display: none;
+    @include mobileMode{
+        display: flex;
+    }
+    .burger{
+        width: 30px;
+        border-bottom: 2px solid $second-color;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+        margin-right: 10px;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 30px;
+            top: -10px;
+            border-bottom: 2px solid $second-color;
+            transition: all 0.2s ease-in-out;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            border-bottom: 2px solid $second-color;
+            top: 10px;
+            transition: all 0.2s ease-in-out;
+            width: 30px;
+        }
+    }
+    .mobile-menu{
+        text-align: center;
+        margin-right: 10px;
+        position: fixed;
+        top: 10%;
+        left: 150vw;
+        background-color:lighten($color:#7a7e7d, $amount: 10);
+        color: white;
+        width: 100%;
+        height: 101vh;
+        @include flexCenter();
+        transition: all 0.2s ease-in-out;
+        ul{
+            list-style: none;
+            margin-top: -110px;
+            margin-left: 0px;
+            padding: 0;
+
+            li{
+                margin-top: 25px;
+                font-size: 30px;
+                text-align: center;
+                transition: all 0.4s ease-in-out;
+                transform: translateX(100vw);
+                .first-child{
+                    color: white;
+                }
+                @for $i from 1 to 4{
+                    &:nth-child(#{$i}){
+                        transition-delay: $i * 0.1 + s;
+                    }
+                }
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &.open{
+        .burger{
+            transform: rotate(225deg);
+            border-color: transparent;
+
+            &::after{
+                transform: translate(0px, 7px);
+            }
+
+            &::before{
+                transform: rotate(90deg) translate(-12px, 0px);
+            }
+        }
+
+        .mobile-menu{
+            left: -120px;
+            display: flex;
+            flex-direction: column;
+            ul{
+                display: flex;
+                 flex-direction: column;
+                li{
+                    transform: translateX(0);
+                }
+            }
+        }
+        input{
+            display: flex;
+            // flex-direction: column;
+        }
+    }
+}

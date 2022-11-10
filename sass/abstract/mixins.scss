@@ -1,0 +1,11 @@
+@mixin flexCenter($mainAccess: center) {
+    display: flex;
+    justify-content: $mainAccess;
+    align-items: center;
+  }
+  
+@mixin mobileMode {
+    @media(max-width: 920px){
+        @content;
+    }
+}

@@ -1,0 +1,138 @@
+.section4{
+    padding-left: 70px;
+    .sec1{
+        display: flex;
+        @include mobileMode{
+            display: flex;
+            flex-direction: column;
+        }
+        h2{
+            width: 331px;
+            font-size: 50px;
+            font-weight: 600px;
+            color: $p-color;
+            @include mobileMode{
+                text-align: center;
+            }
+        }
+        .p-sec{
+            display: flex;
+            @include mobileMode{
+                display: flex;
+            }
+            p{
+                color: $second-color;
+                width: 461px;
+                font-size: 18px;
+                font-weight: 500px;
+                margin-left: 113px;
+                margin-top: 75px;
+                @include mobileMode{
+                    margin-left: -45px;
+                }
+            }
+            input{
+                @include mobileMode{
+                    margin-left: 0px;
+                }
+                background-color: $primary-color;
+                color: #F8F8FA;
+                border: 1px solid $second-color;
+                border-radius: 50px;
+                height: 66px;
+                font-size: 18px;
+                font-weight: 500px;
+                padding: 18px 31px;
+                margin-left: 113px;
+                margin-top: 70px;
+                cursor: pointer;
+                &:hover{
+                    background-color: transparent;
+                    color: $primary-color;
+                    border: 1px solid $primary-color;
+                }
+        }
+        }
+    }
+    .sec2{
+        display: flex;
+        margin-bottom: 50px;
+            @include mobileMode{
+                display: flex;
+                flex-direction: column;
+            }
+        .card1{
+            width: 32%;
+            @include mobileMode{
+                width: 100%;
+            }
+            img{
+                width: 364px;
+                &:hover{
+                    transform: scale(1.2);
+                    width: 350px;
+                }
+            }
+            h4{
+                font-size: 30px;
+                color: $p-color;
+                width: 282px;
+                margin-top: 30px;
+            }
+            p{
+                font-size: 18px;
+                color: $second-color;
+                width: 340px;
+                margin-top: -20px;
+            }
+        }
+        .card2{
+            width: 32%;
+            @include mobileMode{
+                width: 100%;
+            }
+            img{
+                width: 364px;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+            h4{
+                font-size: 30px;
+                color: $p-color;
+                width: 282px;
+                margin-top: 30px;
+            }
+            p{
+                font-size: 18px;
+                color: $second-color;
+                width: 340px;
+                margin-top: -20px;
+            }
+        }
+        .card3{
+            width: 32%;
+            @include mobileMode{
+                width: 100%;
+            }
+            img{
+                width: 364px;
+                &:hover{
+                    transform: scale(1.2);
+                }
+            }
+            h4{
+                font-size: 30px;
+                color: $p-color;
+                width: 282px;
+                margin-top: 30px;
+            }
+            p{
+                font-size: 18px;
+                color: $second-color;
+                width: 340px;
+                margin-top: -20px;
+            }
+        }
+    }
+}
